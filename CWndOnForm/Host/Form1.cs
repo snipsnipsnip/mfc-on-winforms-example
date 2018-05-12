@@ -14,6 +14,14 @@ namespace Host
         public Form1()
         {
             InitializeComponent();
+            try
+            {
+                guestControl1.Init();
+            }
+            catch (Exception ex)
+            {
+                Text = ex.Message;
+            }
         }
     }
 }
